@@ -71,15 +71,3 @@ function editVersion(){
         }
     });
 }
-
-// $('#search').on('click', function(e){
-//     let value = $('[data-search]').val();
-//     $.ajax({
-//         url: '../../dist/application/view/search_view.php',
-//         type: "get",
-//         data: {search: value},
-//         success: function(res){
-//             document.location.href = '../../dist/application/view/search_view.php?id='+value;
-//         }
-//     });
-// });
