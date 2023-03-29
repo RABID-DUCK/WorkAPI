@@ -132,7 +132,7 @@ License: For each use you must have a valid license purchased only from above li
 								<li class="breadcrumb-item text-muted">
 									<a href="/dist" class="text-muted">Домой</a>
 								</li>
-								<li class="breadcrumb-item text-dark"></li>
+								<li class="breadcrumb-item text-dark">Проекты</li>
 							</ul>
 							<!--end::Breadcrumb-->
 						</div>

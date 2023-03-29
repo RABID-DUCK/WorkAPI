@@ -132,6 +132,9 @@ License: For each use you must have a valid license purchased only from above li
 								<li class="breadcrumb-item text-muted">
 									<a href="/dist" class="text-muted">Домой</a>
 								</li>
+								<li class="breadcrumb-item text-dark">
+									<a class="text-muted" href="../../index.php">Проекты</a>
+								</li>
 								<li class="breadcrumb-item text-dark"><? echo $_GET["fix"] ?></li>
 							</ul>
 							<!--end::Breadcrumb-->
