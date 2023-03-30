@@ -8,6 +8,7 @@ $micro = $_POST['micro'];
 $releaseNote = $_POST['releaseNote'];
 $platform = $_POST['platform'];
 $file = $_FILES['file'];
+$uploadfile = '/uploads/';
 
 if(empty($major) && empty($minor) && empty($micro)
  && empty($releaseNote) && isset($file)){
@@ -15,7 +16,7 @@ if(empty($major) && empty($minor) && empty($micro)
 }
 else{
     $object = new Layout();
-    $object->AddVersion($major, $minor, $micro, $releaseNote, $platform);
+    $object->AddVersion($major, $minor, $micro, $releaseNote, $platform, $file);
     move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile);
     echo "Данные успешно добавлены!";
 }

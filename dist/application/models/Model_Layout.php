@@ -66,14 +66,15 @@ class Layout{
         curl_close($ch);
     }
 
-    public function AddVersion($major, $minor, $micro, $releaseNote, $platform){
+    public function AddVersion($major, $minor, $micro, $releaseNote, $platform, $file){
         $this->GetToken();
         $args = array(
             "major" => $major,
             "minor" => $minor,
             "micro" => $micro,
             "releaseNote" =>$releaseNote,
-            "platform" => $platform
+            "platform" => $platform,
+            "file" => $file
         );
         $ch = curl_init("http://sandbox1.pl-llc.ru/api/plunity/add?token=$this->token");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
