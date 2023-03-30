@@ -9,15 +9,14 @@ $releaseNote = $_POST['releaseNote'];
 $platform = $_POST['platform'];
 $file = $_FILES['file'];
 $uploadfile = '/uploads/';
-echo $major .$minor .$micro . $releaseNote;
 
-// if(isset($major) && isset($minor) && isset($micro)
-//  && isset($releaseNote)){
-//     $object = new Layout();
-//     $object->AddVersion($major, $minor, $micro, $releaseNote, $platform, $file);
-//     move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile);
-//     echo "Данные успешно добавлены!";
-// }
-// else{
-//     echo "Не все данные заполнены";
-// }
+if(isset($major) && isset($minor) && isset($micro)
+ && isset($releaseNote)){
+    $object = new Layout();
+    $object->AddVersion($major, $minor, $micro, $releaseNote, $platform, $file);
+    move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile);
+    echo "Данные успешно добавлены!";
+}
+else{
+    echo "Не все данные заполнены";
+}

@@ -32,7 +32,7 @@
                         <form method="post" id="form-addVersion">
 						<div class="item-pl">
 							<span>major</span>
-							<input type="hidden" name="major" placeholder="major">
+							<input type="hidden" name="hide" placeholder="major">
 							<input type="text" name="major" placeholder="major">
 						</div>
 						<div class="item-pl">
