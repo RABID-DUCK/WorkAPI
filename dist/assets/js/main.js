@@ -11,17 +11,20 @@ $('#newUser').on('click', function (e) {
 });
 
 function addVersion(){
-    var modalForm_data = $('#form-addVersion').serialize();
-    let form_data = new FormData();
-    form_data.append('file', $('#sortfile')[0].files[0]);
-    form_data.append('modal', modalForm_data);
-    console.log(form_data);
+    var formDdata = new FormData();
+    formDdata.append('major', $('#form-addVersion').find('[name="major"]').val());
+    formDdata.append('minor', $('#form-addVersion').find('[name="minor"]').val());
+    formDdata.append('micro', $('#form-addVersion').find('[name="micro"]').val());
+    formDdata.append('releaseNote', $('#form-addVersion').find('[name="releaseNote"]').val());
+    formDdata.append('platform', $('#form-addVersion').find('[name="platform"]').val());
+    formDdata.append('file', $('#sortfile')[0].files[0]);
     $.ajax({
         type: 'post',
         url: '../../dist/application/controller/controller_addVersion.php',
         cache: false,
+        contentType: false,
         processData: false,
-        data: form_data,
+        data: formDdata,
         success: function(response){
             alert(response);
         },

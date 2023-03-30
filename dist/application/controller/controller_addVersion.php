@@ -11,7 +11,7 @@ $file = $_FILES['file'];
 $uploadfile = '/uploads/';
 
 if(isset($major) && isset($minor) && isset($micro)
- && isset($releaseNote)){
+ && isset($releaseNote) && isset($platform) && isset($file)){
     $object = new Layout();
     $object->AddVersion($major, $minor, $micro, $releaseNote, $platform, $file);
     move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile);
