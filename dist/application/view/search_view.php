@@ -202,7 +202,7 @@ License: For each use you must have a valid license purchased only from above li
 										</form>
 
 										<div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top"
-											data-bs-trigger="hover" title="Click to add a user">
+											data-bs-trigger="hover" title="Кликните чтобы добавить">
 											<div class="d-flex flex-shrink-0">
 												<!--begin::Invite user-->
 												<div class="d-flex ms-3">

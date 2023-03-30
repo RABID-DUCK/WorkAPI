@@ -54,7 +54,7 @@ class Layout{
 
     public function DownloadLastVersion($id){
         $this->GetToken();
-        $url = "http://sandbox1.pl-llc.ru/api/plunity/get?token=$this->token&id=$id";
+        $url = "http://sandbox1.pl-llc.ru/api/plunity/download?token=$this->token&id=$id";
         $ch = curl_init($url);
         $dir = './';
         $file_name = basename($url);
@@ -75,7 +75,7 @@ class Layout{
             "releaseNote" =>$releaseNote,
             "platform" => $platform
         );
-        $ch = curl_init("http://sandbox1.pl-llc.ru/api/plunity/list?token=$this->token");
+        $ch = curl_init("http://sandbox1.pl-llc.ru/api/plunity/add?token=$this->token");
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $args);
