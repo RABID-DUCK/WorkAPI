@@ -27,6 +27,7 @@ function addVersion(){
         data: formDdata,
         success: function(response){
             alert(response);
+            $('[data-bs-dismiss="modal"]').click(); 
         },
         error: function(){
             alert("Произошла ошибка!");
@@ -77,6 +78,7 @@ function editVersion(){
         data: formDdata,
         success: function(response){
             alert(response);
+            $('[data-bs-dismiss="modal"]').click(); 
         },
         error: function(){
             alert("Произошла ошибка!");
