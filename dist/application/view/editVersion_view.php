@@ -82,7 +82,7 @@ else{
 									<div class="dropzone dropzone-queue mb-2" id="kt_dropzonejs_example_2">
 										<!--begin::Controls-->
 										<div class="dropzone-panel mb-lg-0 mb-2">
-											<a class="dropzone-select btn btn-sm btn-primary me-2">Выберите файл</a>
+										<input type="file" class="dropzone-select btn btn-sm btn-primary me-2" id="sortfile" name="file" value="Выберите файл">
 											<!-- <a class="dropzone-remove-all btn btn-sm btn-light-primary">Удалить все</a> -->
 										</div>
 										<!--end::Controls-->

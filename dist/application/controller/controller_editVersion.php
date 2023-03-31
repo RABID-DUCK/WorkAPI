@@ -9,7 +9,9 @@ if(isset($id)){
     $minor = $_POST["minor"];
     $micro = $_POST["micro"];
     $releaseNote = $_POST["releaseNote"];
-    $file = "";
+    $platform = $_POST['platform'];
+    $file = $_FILES['file'];
+    $uploadfile = '/uploads/';
     $layout->EditVersion($id, $major, $minor, $micro, $releaseNote, $file);
     echo "Данные успешно отредактированы!";
 }

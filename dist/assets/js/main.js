@@ -60,12 +60,21 @@ $(document).on('click', '#edit_version', function(e){
 });
 
 function editVersion(){
-    var modalForm_data = $('#form-editVersion').serialize();
+    var formDdata = new FormData();
+    formDdata.append('id', $('#form-editVersion').find('[name="id"]').val());
+    formDdata.append('major', $('#form-editVersion').find('[name="major"]').val());
+    formDdata.append('minor', $('#form-editVersion').find('[name="minor"]').val());
+    formDdata.append('micro', $('#form-editVersion').find('[name="micro"]').val());
+    formDdata.append('releaseNote', $('#form-editVersion').find('[name="releaseNote"]').val());
+    formDdata.append('platform', $('#form-editVersion').find('[name="platform"]').val());
+    formDdata.append('file', $('#sortfile')[0].files[0]);
     $.ajax({
         type: 'post',
         url: '../../dist/application/controller/controller_editVersion.php',
-        dataType: 'text',
-        data: modalForm_data,
+        cache: false,
+        contentType: false,
+        processData: false,
+        data: formDdata,
         success: function(response){
             alert(response);
         },
