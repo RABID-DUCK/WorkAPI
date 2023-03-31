@@ -4454,6 +4454,12 @@ textarea.form-control-lg {
     padding-right: 0.5rem;
     padding-left: 0.5rem;
   }
+  .hide{
+    display: none;
+  }
+  .vissible{
+    display: block;
+  }
   .navbar-expand-sm .navbar-nav-scroll {
     overflow: visible;
   }

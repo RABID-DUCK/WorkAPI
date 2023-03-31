@@ -85,3 +85,18 @@ function editVersion(){
         }
     });
 }
+
+$('#search').on('click', function(e){
+    e.preventDefault();
+    id = $('#info-id').val();
+    $.ajax({
+        url: '../../dist/application/view/search_view.php',
+        type: 'GET',
+        data: {searchId: id},
+        success: function(res){
+            $('#search-tbody').html(res);
+            $('#list-tbody').addClass('hide');
+            $('#search-tbody').removeClass('hide');
+        }
+    });  
+});

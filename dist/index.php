@@ -179,7 +179,7 @@ License: For each use you must have a valid license purchased only from above li
 								<div class="card card-xl-stretch mb-5 mb-xl-8">
 									<!--begin::Header-->
 									<div class="card-header border-0 pt-5">
-										<form data-kt-search-element="form" action="../dist/application/view/search_view.php" method="GET"
+										<form data-kt-search-element="form"
 											class="w-60 position-relative mb-5 search-users" autocomplete="off">
 											<!--begin::Hidden input(Added to disable form autocomplete)-->
 											<input type="hidden" />
@@ -190,12 +190,13 @@ License: For each use you must have a valid license purchased only from above li
 											<!--end::Icon-->
 
 											<!--begin::Input-->
-											<input type="text"
+											<input type="number"
 												class="form-control form-control-lg form-control-solid px-15"
 												name="search" value="" placeholder="Поиск по id..."
-												data-kt-search-element="input" data-search />
+												min="0"
+												data-kt-search-element="input" id="info-id" data-search />
 											<!--end::Input-->
-											<input type="submit" name="fix" class="btn btn-primary hover-elevate-up" value="Поиск">
+											<input type="submit" name="search-id" class="btn btn-primary hover-elevate-up" id="search" value="Поиск">
 										</form>
 
 										<div class="card-toolbar" data-bs-toggle="tooltip" data-bs-placement="top"
@@ -230,7 +231,10 @@ License: For each use you must have a valid license purchased only from above li
 												</thead>
 												<!--end::Table head-->
 												<!--begin::Table body-->
-												<tbody>
+												<tbody class="hide" id="search-tbody">
+													
+												</tbody>
+												<tbody id="list-tbody">
 														<?php include('application/view/listVersions_view.php') ?>
 												</tbody>
 												<!--end::Table body-->
